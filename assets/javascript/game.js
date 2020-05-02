@@ -35,3 +35,27 @@ teamtwoShootButton.addEventListener("click", function () {
         teamtwoNumgoals.innerHTML = teamtwoGoals;
     }
 })
+
+resetButton.addEventListener("click", function () {
+    console.log("#reset-button")
+    let teamoneGoals = Number(teamoneNumgoals.innerHTML);
+    let teamtwoGoals = Number(teamtwoNumgoals.innerHTML);
+    if (teamoneGoals > teamtwoGoals) {
+        alert("TEAM ONE WINS!!!!!");
+    }
+    else if (teamoneGoals < teamtwoGoals) {
+        alert("TEAM TWO WINS!!!!!");
+    }
+    else {
+        alert("ITS A TIE!!!!!");
+    }
+    let resetCount = Number(numResets.innerHTML) + 1;
+    numResets.innerHTML = resetCount;
+    teamoneNumshots.innerHTML = 0;
+    teamtwoNumshots.innerHTML = 0;
+    teamoneNumgoals.innerHTML = 0;
+    teamtwoNumgoals.innerHTML = 0;
+
+
+
+})
